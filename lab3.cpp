@@ -6,8 +6,8 @@
 #define n 5
 using namespace std;
 
-void sorting(int a[n][n]);//функція сортування
-void calc(int a[n][n]);//функція обчислень
+void sorting(int a[n][n]);//sorting function
+void calc(int a[n][n]);//calculation function
 
 int main()
 {

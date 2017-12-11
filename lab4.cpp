@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include <iostream>
-#define ArraySize 5
+#define ArraySize 5 //determines the number of columns and rows for the matrix (matrix is square, so only one value was used)
 using namespace std;
 
 
@@ -14,8 +14,8 @@ private:
 public:
 	void ReadFromConsole();
 	void PrintToConsole();
-	void InsertionSort();
-	void SumAndMeanCalculations();
+	void InsertionSort(); 
+	void SumAndMeanCalculations(); //finds and also displays on the console the sum of elements in each column under the main diagonal and it's geometric mean
 };
 
 
@@ -66,9 +66,9 @@ void Matrix::SumAndMeanCalculations()
 
 	int RowCounter, ColumnCounter;
 
-	double ElementsSumUnderMainDiagonal;
-	double GeometricMean = 0;
-	double GeometricMeanProduct = 1;
+	double ElementsSumUnderMainDiagonal; //sum of elements under the main diagonal
+	double GeometricMean = 0; 
+	double GeometricMeanProduct = 1; //the product, which is needed to find the geometric mean
 	for (ColumnCounter = 0; ColumnCounter < ArraySize; ColumnCounter++)
 
 	{
@@ -78,7 +78,7 @@ void Matrix::SumAndMeanCalculations()
 		for (RowCounter = 1; RowCounter < ArraySize; RowCounter++)
 		{
 			if (RowCounter > ColumnCounter)
-			ElementsSumUnderMainDiagonal = ElementsSumUnderMainDiagonal + MatrixMassive[RowCounter][ColumnCounter];
+				ElementsSumUnderMainDiagonal = ElementsSumUnderMainDiagonal + MatrixMassive[RowCounter][ColumnCounter];
 
 		}
 
